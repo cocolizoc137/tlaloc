@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="stilot.css ">
+    <title>Compra Exitosa</title>
+</head>
+ <style>
+        #mensaje_compra {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+         background-color: white;
+            border-radius: 5px;
+        }
+       
+        input[type="text"], input[type="number"], input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        body{
+
+            background-image: url('diostla.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    </style>
+<body>
+    <div id="mensaje_compra" style="display:none;">
+
+        <h2>¡Compra Exitosa!</h2>
+        <p>¡Gracias por tu compra!</p>
+        <p>Estamos encantados de que hayas elegido nuestros productos.</p>
+        <p>¡Esperamos que disfrutes de tu compra!</p>
+        <p>Recibirás una confirmación por correo electrónico pronto.</p>
+        <p><a href="principio.html">Volver a la página de inicio</a></p>
+    </div>
+
+    <script>
+       
+        setTimeout(function() {
+            document.getElementById('mensaje_compra').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

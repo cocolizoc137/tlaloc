@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmación de Compra</title>
+    <style>
+        .detalle {
+            margin-bottom: 20px;
+        }
+        .total {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Confirmación de Compra</h2>
+
+<div class="detalle">
+    <h3>Detalles de la Compra:</h3>
+    <ul id="lista-detalle"></ul>
+</div>
+
+<div class="total">
+    <h3>Total a Pagar:</h3>
+    <p id="total-pagar"></p>
+</div>
+
+<script>
+    let carrito = JSON.parse(localStorage.getItem('carrito'));
+    let total = parseFloat(localStorage.getItem('total'));
+
+    function mostrarDetalleCompra() {
+        let listaDetalle = document.getElementById('lista-detalle');
+        carrito.forEach(item => {
+            let li = document.createElement('li');
+            li.textContent = `${item.item} - $${item.precio}`;
+            listaDetalle.appendChild(li);
+        });
+    }
+
+    function mostrarTotal() {
+        document.getElementById('total-pagar').textContent = `$${total}`;
+    }
+
+    mostrarDetalleCompra();
+    mostrarTotal();
+</script>
+
+</body>
+</html>

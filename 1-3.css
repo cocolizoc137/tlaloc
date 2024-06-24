@@ -1,0 +1,75 @@
+ * {
+padding: 0px;
+margin: 0px;
+}
+
+header nav
+{
+background: green;
+ z-index: 1000;
+max-width: 1000;
+width: 95%;
+margin: 20px auto;
+}
+header nav ul
+ {
+ list-style: none;
+ }
+header nav ul li
+{
+display: inline-block;
+position: relative;
+}
+header nav ul li a
+{
+color:#fff;
+display: block;
+text-decoration:none;
+padding: 25px;
+}
+header nav ul li:hover
+{
+background: #0FA280
+}
+header nav ul li a span
+{
+margin-right: 10px;
+}
+header nav ul li:hover .hijo
+{
+display:block;
+}
+header nav ul li .hijo
+{
+display:none;
+background:#0F8BA3;
+position: absolute;
+width: 150%;
+z-index:1000;
+}
+header nav ul li .hijo li
+{
+display: block;
+overflow: hidden;
+border-bottom: 3px solid
+rgba(255,255,255,.5);
+}
+header nav ul li .hijo li a
+{
+display: block;
+}
+header nav ul li .hijo li a span
+{
+float: right;
+position: relative;
+top:3px;
+margin-right: 0px;
+margin-left: 10px;
+}
+header nav ul li .flecha
+{
+position: relative;
+top: 5px;
+margin-left: 10px;
+margin-right: 0px;
+}

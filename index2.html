@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOGEO</title>
+    <link rel="stylesheet" type="text/css" href="va3.css">
+
+    <script>
+        function validarFormulario() {
+            var usuario = document.getElementById("texto").value;
+            var contraseña = document.getElementById("pass").value;
+
+            
+            if (usuario.trim() === "" || contraseña.trim() === "") {
+                alert("Por favor completa todos los campos.");
+                return false; // Evita que el formulario se envíe
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+<img class="gif-animado" src="lluvias.gif" alt="GIF animado">
+
+<form action="principio.html" method="POST" onsubmit="return validarFormulario();">
+    <p>Finalmente captura el nombre de usuario y contraseña con el que accederás posteriormente</p><br>
+    <input type="text" name="texto" placeholder="Usuario" id="texto" required><br>
+    <input type="password" name="pass" placeholder="Contraseña" id="pass" required><br>
+
+    <input type="submit" value="INGRESAR"><br>
+</form>
+
+</body>
+</html>
